@@ -1,4 +1,4 @@
-
+var colors = require ('colors');
 
 var mysql = require ("mysql");
 
@@ -15,7 +15,7 @@ connection.query("select id, email from Account where id <= 5;", function (err, 
 	}
 	else{
 	    result.forEach(function (x){
-	       console.log("#", x.id + ": " + x.email); 
+	       console.log("#".bold+ x.id.toString().bold + ": ".bold + x.email.yellow); 
 	    });
 	}
 	connection.end();
