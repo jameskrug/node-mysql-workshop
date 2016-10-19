@@ -7,7 +7,7 @@ var connection = mysql.createConnection({
 	database : "mysql"
 });
 
-connection.query("show tables;", function (err, result){
+connection.query("show databses;", function (err, result){
 	if(err){
 		console.log(err);
 	}
